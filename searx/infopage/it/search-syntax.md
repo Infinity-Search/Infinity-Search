@@ -1,89 +1,52 @@
 # Sintassi di ricerca
 
-SearXNG è dotato di una sintassi di ricerca che consente di modificare le
-categorie, motori, lingue e altro ancora.  Vedere il {{link('preferenze',
-'preferences')}} per l'elenco dei motori, delle categorie e delle lingue.
+Infinity Search è dotato di una sintassi di ricerca che consente di modificare le categorie, i
+motori, le lingue e altro ancora.  Vedere {{link(‘preferences’, ‘preferences’)}} per
+l'elenco dei motori, delle categorie e delle lingue.
 
-## `!` seleziona motore e gategoria
+## `!` Selezionare motore e categoria
 
-Per impostare i nomi delle categorie e/o dei motori, utilizzare il prefisso `!`.
-Per fare qualche esempio:
+Per impostare i nomi delle categorie e/o dei motori, utilizzare il prefisso `!`.  Ecco alcuni esempi:
 
-- ricerca in Wikipedia per **parigi**
+- Cerca **parigi** su Wikipedia:
 
-  - {{search('!wp parigi')}}
-  - {{search('!wikipedia parigi')}}
+- {{search(‘!wp parigi’)}}
+- {{search(‘!wikipedia parigi’)}}
 
-- ricerca nella categoria **mappa** per **parigi**
+- Cerca **parigi** nella categoria **mappa**:
 
-- {{search('!map parigi')}}
+- {{search(‘!mappa parigi’)}}
 
-- ricerca per immagini
+- Ricerca immagini
 
-- {{search('!images Wau Holland')}}
+- {{search(‘!images Wau Holland’)}}
 
-Sono accettate anche le abbreviazioni dei motori e delle lingue.  I modificatori
-di motore/categoria sono modificatori a catena e inclusivi.  Ad esempio, con
-{{search('!map !ddg !wp parigi')}} si cerca nella categoria mappe e DuckDuckGo e
-Wikipedia per **parigi**.
+Sono accettate anche le abbreviazioni dei motori e delle lingue.  I modificatori di motore/categoria
+sono concatenabili e inclusivi.  Ad esempio, {{search('!map !ddg !wp
+paris')}} cerca nella categoria map e cerca **paris** su DuckDuckGo e Wikipedia.
 
-## `:` selziona lingua
+## `:` Seleziona lingua
 
-Per selezionare il filtro lingua utilizzare il prefisso `:`.  Per fare un esempio:
+Per selezionare un filtro lingua, usa il prefisso `:`.  Ad esempio:
 
-- cercare Wikipedia in base a una lingua personalizzata
+- Cerca su Wikipedia con una lingua personalizzata:
 
-  - {{search(':it !wp Wau Holland')}}
+- {{search(‘:fr !wp Wau Holland’)}}
 
-## `!!<bang>` bangs esterni
+## `!!<bang>` Bang esterni
 
-SearXNG supporta i bang esterni di [DuckDuckGo].  Per saltare direttamente a una
-pagina di ricerca esterna utilizzare il prefisso `!!`.  Per fare un esempio:
+Infinity Search supporta i bang esterni da [DuckDuckGo].  Per passare direttamente a una
+pagina di ricerca esterna, usa il prefisso `!!`.  Ad esempio:
 
-- ricerca su Wikipedia in base a una lingua personalizzata
+- Cerca su Wikipedia con una lingua personalizzata:
 
-  - {{search('!!wde Wau Holland')}}
+- {{search(‘!!wfr Wau Holland’)}}
 
-Si noti che la ricerca verrà eseguita direttamente nel motore di ricerca
-esterno.  motore di ricerca esterno, SearXNG non può proteggere la privacy
-dell'utente.
+Si prega di notare che la ricerca verrà eseguita direttamente nel motore di ricerca esterno.
+  Infinity Search non può proteggere la privacy dell'utente in questo caso.
 
 [DuckDuckGo]: https://duckduckgo.com/bang
 
 ## `!!` reindirizzamento automatico
 
-Quando si menziona `!!` all'interno della query di ricerca (separata da spazi),
-si viene automaticamente reindirizzati al primo risultato.  Questo comportamento
-è paragonabile alla funzione "Mi sento fortunato" di DuckDuckGo.  Per fare un
-esempio:
-
-- cercare una query e venire reindirizzati al primo risultato
-
-  - {{search('!! Wau Holland')}}
-
-Si tenga presente che il risultato a cui si viene reindirizzati non può essere
-verificato come affidabile, SearXNG non è in grado di proteggere la vostra
-privacy personale quando utilizzate questa funzione.  Utilizzatela a vostro
-rischio e pericolo.
-
-## Queries Speciali
-
-Nella pagina {{link('preferenze', 'preferences')}} si trovano parole chiave per
-_query speciali_.  Per fare qualche esempio:
-
-- Generare un UUID casuale
-
-  - {{search('random uuid')}}
-
-- Trovare la media
-
-  - {{search('avg 123 548 2.04 24.2')}}
-
-- Mostra l'_user agent_ del browser (deve essere attivato)
-
-  - {{search('user-agent')}}
-
-- Converte le stringhe in diversi hash digest (deve essere attivato)
-
-  - {{search('md5 lorem ipsum')}}
-  - {{search('sha512 lorem ipsum')}}
+Quando si include `!!` con

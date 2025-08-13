@@ -1,73 +1,51 @@
-# Sintaks pencarian
+# Sintaks Pencarian
 
-SearXNG mempunyai sintaks pencarian memungkinkan Anda untuk mengubah kategori,
-mesin pencari, bahasa dan lainnya.  Lihat {{link('preferensi', 'preferences')}}
-untuk daftar mesin pencari, kategori dan bahasa.
+Infinity Search dilengkapi dengan sintaks pencarian yang memungkinkan Anda mengubah kategori,
+mesin pencari, bahasa, dan lainnya. Lihat {{link(‘preferences’, ‘preferences’)}} untuk
+daftar mesin pencari, kategori, dan bahasa.
 
-## `!` pilih mesin pencari dan kategori
+## `!` Pilih mesin pencari dan kategori
 
-Untuk menetapkan nama kategori dan/atau mesin pencari gunakan awalan `!`.
-Sebagai contoh:
+Untuk menetapkan nama kategori dan/atau mesin pencari, gunakan awalan `!`. Berikut beberapa contoh:
 
-- cari di Wikipedia tentang **Jakarta**
+- Cari Wikipedia untuk **paris**:
 
-  - {{search('!wp Jakarta')}}
-  - {{search('!wikipedia Jakarta')}}
+  - {{search(‘!wp paris’)}}
+  - {{search(‘!wikipedia paris’)}}
 
-- cari dalam kategori **peta** untuk **Jakarta**
+- Cari dalam kategori **map** untuk **paris**:
 
-  - {{search('!map Jakarta')}}
+  - {{search(‘!map paris’)}}
 
-- pencarian gambar
+- Pencarian gambar
 
-  - {{search('!images kucing')}}
+  - {{search(‘!images Wau Holland’)}}
 
-Singkatan mesin pencari dan bahasa juga diterima.  Pengubah mesin/kategori dapat
-dirantai dan inklusif.  Misalnya dengan pencarian {{search('!map !ddg !wp
-Jakarta')}} dalam kategori peta dan DuckDuckGo dan Wikipedia tentang
-**Jakarta**.
+Singkatan mesin pencari dan bahasa juga diterima. Modifier mesin/kategori
+dapat digabungkan dan inklusif. Misalnya, {{search('!map !ddg !wp
+paris')}} mencari di kategori peta dan mencari DuckDuckGo dan Wikipedia untuk **paris**.
 
-## `:` pilih bahasa
+## `:` Pilih bahasa
 
-Untuk memilih saringan bahasa gunakan awalan `:`.  Sebagai contoh:
+Untuk memilih filter bahasa, gunakan awalan `:`.  Contoh:
 
-- cari Wikipedia dengan bahasa lain
+- Cari Wikipedia dengan bahasa kustom:
 
-  - {{search(':en !wp Jakarta')}}
+  - {{search(‘:fr !wp Wau Holland’)}}
 
-## `!!<bang>` mesin pencarian (*bangs*) eksternal
+## `!!<bang>` Bang eksternal
 
-SearXNG mendukung mesin pencarian eksternal (*bangs*) dari [DuckDuckGo].  Untuk
-langsung lompat ke sebuah laman pencarian eksternal gunakan awalan `!!`.
-Sebagai contoh:
+Infinity Search mendukung bang eksternal dari [DuckDuckGo]. Untuk langsung melompat ke halaman
+pencarian eksternal, gunakan awalan `!!`. Sebagai contoh:
 
-- cari Wikipedia dengan bahasa yang lain
+- Cari Wikipedia dengan bahasa kustom:
 
-  - {{search('!!wen cat')}}
+  - {{search(‘!!wfr Wau Holland’)}}
 
-Diingat, pencarian Anda akan dilakukan secara langsung di mesin pencari
-eksternal, SearXNG tidak dapat melindungi privasi Anda di sana.
+Harap diperhatikan bahwa pencarian Anda akan dilakukan langsung di mesin pencari eksternal.  Infinity Search tidak dapat melindungi privasi Anda dengan ini.
 
 [DuckDuckGo]: https://duckduckgo.com/bang
 
-## Kueri Khusus
+## `!!` pengalihan otomatis
 
-Dalam laman {{link('preferensi', 'preferences')}} Anda akan menemukan kata kunci
-_kueri khusus_.  Sebagai contoh:
-
-- buat sebuah UUID acak
-
-  - {{search('random uuid')}}
-
-- temukan rata-rata
-
-  - {{search('avg 123 548 2.04 24.2')}}
-
-- tampilkan _user agent_ (agen pengguna) dari peramban Anda (harus diaktifkan)
-
-  - {{search('user-agent')}}
-
-- ubah _string_ (teks) ke intisari *hash* yang berbeda (harus diaktifkan)
-
-  - {{search('md5 kucing sphynx')}}
-  - {{search('sha512 kucing sphynx')}}
+Saat menyertakan `!!` dengan

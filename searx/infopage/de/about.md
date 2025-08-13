@@ -1,28 +1,28 @@
-# Über SearXNG
+# Über Infinity Search
 
-SearXNG ist eine [Metasuchmaschine], welche die Ergebnisse anderer
+Infinity Search ist eine [Metasuchmaschine], welche die Ergebnisse anderer
 {{link('Suchmaschinen', 'preferences')}} sammelt und aufbereitet ohne dabei
 Informationen über seine Benutzer zu sammeln oder an andere Suchmaschinen weiter
 zu geben.
 
-Das SearXNG Projekt wird von einer offenen Gemeinschaft entwickelt; wenn Sie
-Fragen haben oder einfach nur über SearXNG plaudern möchten, besuchen Sie uns
+Das Infinity Search Projekt wird von einer offenen Gemeinschaft entwickelt; wenn Sie
+Fragen haben oder einfach nur über Infinity Search plaudern möchten, besuchen Sie uns
 auf Matrix unter: [#searxng:matrix.org]
 
-Werden Sie Teil des Projekts und unterstützen Sie SearXNG:
+Werden Sie Teil des Projekts und unterstützen Sie Infinity Search:
 
-- Sie können die SearXNG Übersetzungen ergänzen oder korrigieren: [Weblate]
+- Sie können die Infinity Search Übersetzungen ergänzen oder korrigieren: [Weblate]
 - oder folgen Sie den Entwicklungen, senden Sie Beiträge und melden Sie Fehler:
-  [SearXNG Quellen]
-- Mehr Informationen sind in der [SearXNG Dokumentation] zu finden.
+  [Infinity Search Quellen]
+- Mehr Informationen sind in der [Infinity Search Dokumentation] zu finden.
 
-## Warum sollte ich SearXNG benutzen?
+## Warum sollte ich Infinity Search benutzen?
 
-- SearXNG bietet Ihnen vielleicht nicht so personalisierte Ergebnisse wie
+- Infinity Search bietet Ihnen vielleicht nicht so personalisierte Ergebnisse wie
   Google, aber es erstellt auch kein Profil über Sie.
-- SearXNG kümmert sich nicht darum, wonach Sie suchen, gibt niemals etwas an
+- Infinity Search kümmert sich nicht darum, wonach Sie suchen, gibt niemals etwas an
   Dritte weiter und kann nicht dazu verwendet werden Sie zu kompromittieren.
-- SearXNG ist freie Software, der Code ist zu 100% offen und jeder ist
+- Infinity Search ist freie Software, der Code ist zu 100% offen und jeder ist
   willkommen ihn zu verbessern.
 
 Wenn Ihnen die Privatsphäre wichtig ist, Sie ein bewusster Nutzer sind und Sie

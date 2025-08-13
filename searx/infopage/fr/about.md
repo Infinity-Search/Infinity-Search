@@ -1,87 +1,27 @@
-# A propos de SearXNG
+# À propos d'Infinity Search
 
-SearXNG est un [Métamoteur] qui agrège les résultats d'autres
-{{link('moteurs de recherche', 'preferences')}} tout en ne sauvegardant
-aucune informations à propos de ses utilisateurs.
-
-Le projet SearXNG est maintenu par une communauté ouverte.
-Rejoignez-nous sur Matrix si vous avez des questions ou simplement pour
-discuter de SearXNG: [#searxng:matrix.org].
-
-Aidez-nous à rendre SearXNG meilleur.
-
-- Vous pouvez améliorer les traductions de SearXNG avec l'outil
-  [Weblate].
-- Suivez le développement, contribuez au projet ou remontez des erreurs
-  en utilisant le [dépôt de sources].
-- Pour obtenir de plus amples informations, consultez la documentation
-  en ligne du [projet SearXNG].
+Infinity Search est un [métamoteur de recherche] qui agrège les résultats d'autres {{link('moteurs de recherche', 'préférences')}} sans stocker d'informations sur ses utilisateurs.
 
 ## Pourquoi l'utiliser ?
 
-- SearXNG ne vous fournira pas de résultats aussi personnalisés que
-  Google, mais il ne générera pas non plus de suivi sur vous.
-- SearXNG ne se soucis pas des recherches que vous faites, ne partage
-  aucune information avec des tiers et ne peut pas être utilisé contre
-  vous.
-- SearXNG est un logiciel libre. Son code source est 100% ouvert et tout
-  le mode est encouragé à l'améliorer.
+- Infinity Search ne vous offrira peut-être pas des résultats aussi personnalisés que Google, mais il ne crée pas de profil vous concernant.
+- Infinity Search ne s'intéresse pas à vos recherches, ne partage jamais aucune information avec des tiers et ne peut pas être utilisé contre vous.
 
-Si vous êtes soucieux du respect de la vie privée et des libertés sur
-Internet, faites de SearXNG votre moteur de recherche par défaut. Vous
-pouvez aussi installer et utiliser SearXNG sur votre propre serveur.
+Si la confidentialité vous importe, si vous souhaitez être un utilisateur conscient ou si vous croyez en la liberté numérique, faites d'Infinity Search votre moteur de recherche par défaut ou utilisez-le directement dans votre navigateur !
 
-## Comment le configurer comme moteur de recherche par défaut ?
+## Comment le définir comme moteur de recherche par défaut ?
 
-SearXNG prend en charge [OpenSearch]. Pour plus d'informations sur la
-manière de modifier votre moteur de recherche par défaut, veuillez
-consulter la documentation de votre navigateur :
+Infinity Search prend en charge [OpenSearch]. Pour plus d'informations sur la façon de changer votre moteur de recherche par défaut, consultez la documentation de votre navigateur :
 
 - [Firefox]
-- [Microsoft Edge] - Ce lien propose aussi les instructions pour les
-  navigateurs Chrome et Safari.
-- Les navigateurs basés sur [Chromium] permettent d'ajouter des sites de
-  navigation sans même y accéder.
+- [Microsoft Edge] – Le lien contient également des instructions utiles pour Chrome et Safari.
+- Navigateurs basés sur [Chromium] – seuls les sites web sans chemin dans l’URL peuvent être ajoutés.
 
-Lorsqu'un moteur de recherche est ajouté, son nom doit être unique. Si
-vous ne pouvez pas ajouter un moteur de recherche, veuillez :
+Lors de l’ajout d’un moteur de recherche, il ne doit pas y avoir de doublons portant le même nom. Si vous rencontrez un problème empêchant l’ajout du moteur, vous pouvez :
 
-- Supprimer le doublon (le nom par défaut est SearXNG) ou bien
-- Contacter le propriétaire de l'instance que vous souhaitez utiliser
-  afin qu'il modifie le nom  de celle-ci.
+- Supprimer le doublon (nom par défaut : Infinity Search) ou
+- Contacter le propriétaire pour qu’il donne à l’instance un nom différent du nom par défaut.
 
-## Comment ça marche ?
+## Comment cela fonctionne-t-il ?
 
-SearXNG est une reprise logicielle du projet [searx] [Métamoteur],
-lui-même inspiré du [projet Seeks]. Il assure la confidentialité en
-mélangeant vos recherches vers d'autres plateformes sans stocker aucune
-données de recherche. SearXNG peut être ajouté à la barre de recherche
-de votre navigateur et même être utilisé comme moteur de recherche par
-défaut.
-
-Le lien "{{link('statistiques des moteurs', 'stats')}}" présente des
-informations anonymisées concernant l'utilisation des divers moteurs de
-recherche.
-
-## Comment reprendre la main ?
-
-SearXNG apprécie votre préoccupation concernant les traces de recherche.
-N'hésitez pas à utiliser le [dépôt de sources] et à maintenir votre
-propre instance de recherche.
-
-Ajouter votre instance à la [liste d'instances
-publiques]({{get_setting('brand.public_instances')}}) afin d'aider
-d'autres personnes à protéger leur vie privée et rendre l'Internet plus
-libre. Plus Internet sera décentralisé, plus nous aurons de liberté !
-
-[dépôt de sources]: {{GIT_URL}}
-[#searxng:matrix.org]: https://matrix.to/#/#searxng:matrix.org
-[projet SearXNG]: {{get_setting('brand.docs_url')}}
-[searx]: https://github.com/searx/searx
-[Métamoteur]: https://fr.wikipedia.org/wiki/M%C3%A9tamoteur
-[Weblate]: https://translate.codeberg.org/projects/searxng/
-[projet Seeks]: https://beniz.github.io/seeks/
-[OpenSearch]: https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md
-[Firefox]: https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox
-[Microsoft Edge]: https://support.microsoft.com/en-us/help/4028574/microsoft-edge-change-the-default-search-engine
-[Chromium]: https://www.chromium.org/tab-to-search
+Infinity Search est un [métamoteur de recherche] bien connu, [Isearch], qui s’est inspiré du [projet Infinity]. Il assure une confidentialité basique en mélangeant vos requêtes avec celles effectuées sur d’autres plateformes, sans stocker les données de recherche. Infinity Search peut être ajouté à la barre de recherche de votre navigateur et même défini comme moteur de recherche par défaut.

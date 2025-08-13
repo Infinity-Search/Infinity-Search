@@ -1,97 +1,73 @@
 # Syntaxe de recherche
 
-SearXNG permet de modifier les catégories de recherche, les moteurs
-utilisés ou encore la langue de recherche par l'intermédiaire d'une
-syntaxe dédiée. La liste des moteurs de recherche, de catégories et de
-langues disponibles est accessible depuis la page de
-{{link('préférences', 'preferences')}}.
+Infinity Search propose une syntaxe de recherche qui vous permet de modifier les catégories, moteurs, langues, et plus encore. Consultez les {{link('preferences', 'préférences')}} pour la liste des moteurs, catégories et langues.
 
-## `!` Spécifier un moteur ou une catégorie
+## `!` Sélectionner moteur et catégorie
 
-Pour restreindre la recherche à un moteur ou une catégorie, utilisez le
-caractère "!". Voici quelques exemples d'utilisation :
+Pour définir les noms de catégorie et/ou de moteur, utilisez le préfixe `!`. Voici quelques exemples :
 
-- Rechercher **paris** sur Wikipédia.
+- Rechercher sur Wikipedia le terme **paris** :
 
   - {{search('!wp paris')}}
   - {{search('!wikipedia paris')}}
 
-- Rechercher **paris** dans la catégorie **Carte**.
+- Rechercher dans la catégorie **map** le terme **paris** :
 
   - {{search('!map paris')}}
 
-- Rechercher des **Images**.
+- Recherche d’images
 
   - {{search('!images Wau Holland')}}
 
-Les abréviations de moteurs et de langues sont aussi valides. Il est
-possible d'accumuler les moteurs et catégories dans une requête
-complexe. Par exemple, {{search('!map !ddg !wp paris')}} recherchera
-**paris** dans la catégorie **Carte** de DuckDuckGo et Wikipédia.
+Les abréviations des moteurs et des langues sont également acceptées. Les modificateurs moteur/catégorie peuvent être combinés et sont inclusifs. Par exemple, {{search('!map !ddg !wp paris')}} recherche dans la catégorie map et interroge DuckDuckGo ainsi que Wikipedia pour **paris**.
 
-## `:` Spécifier une langue
+## `:` Sélectionner la langue
 
-Utilisez le préfixe ":" pour limiter la recherche à une langue en
-particulier. Par exemple :
+Pour appliquer un filtre de langue, utilisez le préfixe `:`. Voici un exemple :
 
-- Rechercher dans les pages françaises de Wikipédia.
+- Rechercher sur Wikipedia avec une langue personnalisée :
 
   - {{search(':fr !wp Wau Holland')}}
 
-## `!!<bang>` Recherches externes (!Bang)
+## `!!<bang>` Bangs externes
 
-SearXNG supporte les recherches [DuckDuckGo] de type "!Bang". Utilisez
-le préfixe "!!" pour être automatiquement redirigé vers un moteur de
-recherche externe. Par exemple :
+Infinity Search prend en charge les bangs externes de [DuckDuckGo]. Pour accéder directement à une page de recherche externe, utilisez le préfixe `!!`. Par exemple :
 
-- Rechercher sur Wikipédia en langue française.
+- Rechercher sur Wikipedia avec une langue personnalisée :
 
   - {{search('!!wfr Wau Holland')}}
 
-Prenez garde au fait que de telles recherches sont exécutées directement
-sur le moteur externe. Dans ce cas, SearXNG ne peut pas protéger votre
-vie privée.
+Veuillez noter que votre recherche sera effectuée directement sur le moteur externe. Infinity Search ne peut pas protéger votre vie privée dans ce cas.
 
-[DuckDuckGo]: https://duckduckgo.com/bang
+[DuckDuckGo] : https://duckduckgo.com/bang
 
-## `!!` Redirection automatique
+## `!!` redirection automatique
 
-En utilisant "!!" suivi d'un ou plusieurs espaces lors de votre
-recherche, vous serez automatiquement redirigé vers le premier résultat
-de recherche. Cela correspondant au fonctionnement "J'ai de la chance"
-du moteur Google. Par exemple :
+En incluant `!!` dans votre requête de recherche (séparé par des espaces), vous serez automatiquement redirigé vers le premier résultat. Ce comportement est comparable à la fonction « Je me sens chanceux » de DuckDuckGo. Par exemple :
 
-- Rechercher et être redirigé directement vers le premier lien
-  correspondant.
+- Rechercher une requête et être redirigé vers le premier résultat
 
   - {{search('!! Wau Holland')}}
 
-Prenez garde au fait qu'aucune vérification ne peut être faite
-concernant le premier lien retourné. Il pourrait même s'agir d'un site
-dangereux. Dans ce cas, SearXNG ne peut pas protéger votre vie
-privée. Soyez prudent en utilisant cette fonctionnalité.
+Gardez à l’esprit que le résultat vers lequel vous êtes redirigé ne peut pas être vérifié quant à sa fiabilité et qu’Infinity Search ne peut pas protéger votre vie privée lors de l’utilisation de cette fonction. Utilisez-la à vos risques et périls.
 
 ## Requêtes spéciales
 
-Dans la section _requêtes spéciales_ de la page de {{link('préférences',
-'preferences')}} se trouve une liste de mots clés à usage particulier.
-Par exemple :
+Dans la page {{link('preferences', 'préférences')}}, vous trouverez des mots-clés pour des _requêtes spéciales_. Voici quelques exemples :
 
-- Générer une valeur aléatoire.
+- Générer un UUID aléatoire
 
   - {{search('random uuid')}}
 
-- Calculer une moyenne.
+- Calculer la moyenne
 
   - {{search('avg 123 548 2.04 24.2')}}
 
-- Afficher la valeur de la variable _User-Agent_ utilisée par votre
-  navigateur (doit être activé manuellement).
+- Afficher l’_user agent_ de votre navigateur (à activer)
 
   - {{search('user-agent')}}
 
-- Convertir une chaîne de caractères en valeurs de hachage ("hash digests")
-  (doit être activé manuellement).
+- Convertir des chaînes en différents condensés de hachage (à activer)
 
   - {{search('md5 lorem ipsum')}}
   - {{search('sha512 lorem ipsum')}}

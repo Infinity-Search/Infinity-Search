@@ -1,93 +1,54 @@
-# Suchbegriffe
+# Suchsyntax
 
-SearXNG verfügt über eine Syntax mit der in einer Suchanfrage die Kategorien,
-Suchmaschinen, Sprachen und mehr geändert werden können.  In den
-{{link('Eigenschaften','preferences')}} sind die Kategorien, Suchmaschinen und
-Sprachen zu finden, die zur Verfügung stehen.
+Infinity Search verfügt über eine Suchsyntax, mit der Sie Kategorien,
+Suchmaschinen, Sprachen und mehr anpassen können.  Unter {{link(‚preferences‘, ‚preferences‘)}} finden Sie
+eine Liste der Suchmaschinen, Kategorien und Sprachen.
 
 ## `!` Suchmaschine und Kategorie auswählen
 
-Zum Festlegen von Kategorie- und/oder Suchmaschinen dient das Präfix `!`.  Um
-ein paar Beispiele zu geben:
+Um Kategorie- und/oder Suchmaschinennamen festzulegen, verwenden Sie das Präfix `!`.  Hier einige Beispiele:
 
-- in der Wikipedia nach dem Begriff **paris** suchen
+- Suche in Wikipedia nach **Paris**:
 
-  - {{search('!wp paris')}}
-  - {{search('!wikipedia paris')}}
+  - {{search(‚!wp Paris‘)}}
+  - {{search(‚!wikipedia Paris‘)}}
 
-- in der Kategorie **Karte** nach dem Begriff **paris** suchen:
+- Suche in der Kategorie **Karte** nach **Paris**:
 
-  - {{search('!map paris')}}
+  - {{search(‚!map Paris‘)}}
 
-- in der Kategorie **Bilder** suchen
+- Bildersuche
 
-  - {{search('!images Wau Holland')}}
+- {{search(‚!images Wau Holland‘)}}
 
-Abkürzungen der Suchmaschinen und Kategorien sind ebenfalls möglich und können
-auch kombiniert werden.  So wird z.B. mit {{search('!map !ddg !wp paris')}} in
-der Kategorie **Karte** als auch mit den Suchmaschinen DuckDuckGo und Wikipedia
-nach dem Begriff **paris** gesucht.
+Abkürzungen der Suchmaschinen und Sprachen werden ebenfalls akzeptiert.  Suchmaschinen-/Kategorienmodifikatoren
+sind verkettbar und inklusiv.  Beispielsweise sucht {{search('!map !ddg !wp
+paris')}} in der Kategorie „map“ und durchsucht DuckDuckGo und Wikipedia nach **paris**.
 
 ## `:` Sprache auswählen
 
-Um einen Sprachfilter auszuwählen, verwenden Sie das Präfix `:`.  Um ein
-einfaches Beispiel zu geben:
+Um einen Sprachfilter auszuwählen, verwenden Sie das Präfix `:`.  Ein Beispiel:
 
-- Wikipedia mit einer benutzerdefinierten Sprache durchsuchen
+- Wikipedia mit einer benutzerdefinierten Sprache durchsuchen:
 
-  - {{search(':de !wp Wau Holland')}}
+- {{search(‚:fr !wp Wau Holland‘)}}
 
-## `!!<bang>` external bangs
+## `!!<bang>` Externe Bangs
 
-SearXNG unterstützt die _external bangs_ von [DuckDuckGo].  Das Präfix `!!` kann
-verwendet werden um direkt zu einer externen Suchseite zu springen.  Um ein
-Beispiel zu geben:
+Infinity Search unterstützt die externen Bangs von [DuckDuckGo].  Um direkt zu einer
+externen Suchseite zu springen, verwenden Sie das Präfix `!!`.  Ein Beispiel:
 
-- In Wikipedia mit einer benutzerdefinierten Sprache eine Suche durchführen
+- Wikipedia mit einer benutzerdefinierten Sprache durchsuchen:
 
-  - {{search('!!wde Wau Holland')}}
+  - {{search(‚!!wfr Wau Holland‘)}}
 
-Bitte beachten; die Suche wird direkt in der externen Suchmaschine durchgeführt.
-SearXNG kann die Privatsphäre des Benutzers in diesem Fall nur eingeschränkt
-schützen, dennoch wird diese Funktion von manchen Benutzern als sehr nützlich
-empfunden.
+Bitte beachten Sie, dass Ihre Suche direkt in der externen Suchmaschine durchgeführt wird.
+Infinity Search kann Ihre Privatsphäre dabei nicht schützen.
 
 [DuckDuckGo]: https://duckduckgo.com/bang
 
-## `!!` automatic redirect
+## `!!` Automatische Weiterleitung
 
-Bei der Verwendung von `!!` innerhalb der Suchanfrage (durch Leerzeichen
-getrennt), wird automatisch zum ersten Ergebnis weitergeleitet.  Dieses
-Verhalten ist vergleichbar mit der "Feeling Lucky"-Funktion von DuckDuckGo.  Um
-ein Beispiel zu geben:
+Wenn Sie `!!` mit
 
-- Suchanfrage und direkte Weiterleitung zum ersten Ergebnis
-
-  - {{search('!! Wau Holland')}}
-
-Bitte beachten: das Ergebnis zu dem weitergeleitet wird, kann nicht auf seine
-Vertrauenswürdigkeit überprüft werden.  SearXNG kann die Privatsphäre des
-Benutzers in diesem Fall nicht schützen, dennoch wird diese Funktion von manchen
-Benutzern als sehr nützlich empfunden.
-
-## Besondere Abfragen
-
-In den {{link('Eigenschaften', 'preferences')}} finden sich Schlüsselwörter für
-_besondere Abfragen_.  Um ein paar Beispiele zu geben:
-
-- Zufallsgenerator für eine UUID
-
-  - {{search('random uuid')}}
-
-- Bestimmung des Mittelwerts
-
-  - {{search('avg 123 548 2.04 24.2')}}
-
-- anzeigen des _user agent_ Ihres WEB-Browsers (muss aktiviert sein)
-
-  - {{search('user-agent')}}
-
-- Zeichenketten in verschiedene Hash-Digests umwandeln  (muss aktiviert sein)
-
-  - {{search('md5 lorem ipsum')}}
-  - {{search('sha512 lorem ipsum')}}
+Übersetzt mit DeepL.com (kostenlose Version)

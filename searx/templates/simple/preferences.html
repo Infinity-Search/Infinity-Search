@@ -40,12 +40,12 @@
   {%- for plugin in plugins_storage -%}
     {%- if plugin.preference_section == section -%}
       <fieldset>{{- '' -}}
-	<legend>{{ _(plugin.name) }}</legend>{{- '' -}}
+	<legend>{{ _('Infinity Search Plugin: ') + _(plugin.name) }}</legend>{{- '' -}}
 	<div class="value">
 	  {{- checkbox_onoff_reversed('plugin_' + plugin.id, plugin.id not in allowed_plugins, 'plugin_labelledby' + plugin.id) -}}
 	</div>{{- '' -}}
 	<div class="description" id="{{ 'plugin_labelledby' + plugin.id }}">
-	  {{- _(plugin.description) -}}
+	  {{- _('Infinity Search Plugin Description: ') + _(plugin.description) -}}
 	</div>{{- '' -}}
       </fieldset>
     {%- endif -%}
@@ -56,22 +56,22 @@
 {%- if search_engine.about is defined -%}
   {%- set about = search_engine.about -%}
   <div class="engine-tooltip" role="tooltip">{{- '' -}}
-    <p class="engine-description"></p>{{- '' -}}
+    <p class="engine-description">{{ _('About Infinity Search engine:') }}</p>{{- '' -}}
     <p><a href="{{about.website}}" rel="noreferrer">{{about.website}}</a></p>{{- '' -}}
     {%- if about.wikidata_id -%}
       <p><a href="https://www.wikidata.org/wiki/{{about.wikidata_id}}" rel="noreferrer">wikidata.org/wiki/{{about.wikidata_id}}</a></p>
     {%- endif -%}
     {%- if search_engine.enable_http -%}
-      <p>{{- icon_big('exclamation-sign', 'No HTTPS') -}}{{- _('No HTTPS')-}}</p>
+      <p>{{- icon_big('exclamation-sign', _('No HTTPS on Infinity Search engine')) -}}{{ _('No HTTPS') }}</p>
     {% endif -%}
     {%- if reliabilities.get(search_engine.name, {}).errors or reliabilities.get(search_engine.name, {}).checker -%}
       <a href="{{ url_for('stats', engine=search_engine.name|e) }}" {{- ' ' -}}
-         title="{{ _('View error logs and submit a bug report') }}">
-      {{- _('View error logs and submit a bug report') -}}
+         title="{{ _('View Infinity Search engine error logs and submit a bug report') }}">
+      {{ _('View Infinity Search engine error logs and submit a bug report') }}
       </a>
     {%- endif -%}
     <p>{{- '' -}}
-      <span class="right">{{ _("!bang for this engine") }}</span>{{- '' -}}
+      <span class="right">{{ _("!bang for this Infinity Search engine") }}</span>{{- '' -}}
       {%- for bang in [search_engine.name] + [search_engine.shortcut] -%}
         <span class="bang"> {{ '!' + bang.replace(' ', '_') }}</span>
       {%- endfor -%}
@@ -101,7 +101,7 @@
     <div class="engine-tooltip text-left" role="tooltip" id="{{engine_name}}_graph">{{- '' -}}
         <p>{{ _('Median') }}: {{ stats[engine_name].time }}</p>{{- '' -}}
         <p>{{ _('P80') }}: {{ stats[engine_name].rate80 }}</p>{{- '' -}}
-        <p>{{ _('P95') }}: {{ stats[engine_name].rate95 }}</p>{{- '' -}}
+        <p>{{ _('P95') }}: {{ stats[engine_name].rate95 }}</p>
     </div>
   {%- endif -%}
   </td>
@@ -128,14 +128,14 @@
     <td class="{{ label }} column-reliability">{{- '' -}}
       <a href="{{ url_for('stats', engine=engine_name|e) }}">{{- '' -}}
         <span>
-          {{- icon_big('alert', 'The engine is not reliabled') }} {{ r -}}
+          {{- icon_big('alert', _('The Infinity Search engine is not reliable')) }} {{ r -}}
         </span>{{- '' -}}
       </a>{{- '' -}}
       <div class="engine-tooltip" role="tooltip" id="{{engine_name}}_reliability">
         {%- if checker_result -%}
-          <p>{{ _("Failed checker test(s): ") }} {{ ', '.join(checker_result) }}</p>
+          <p>{{ _("Failed checker test(s) on Infinity Search engine: ") }} {{ ', '.join(checker_result) }}</p>
         {%- endif -%}
-        {%- if errors -%}<p>{{ _('Errors:') }}</p>{%- endif -%}
+        {%- if errors -%}<p>{{ _('Errors on Infinity Search engine:') }}</p>{%- endif -%}
         {%- for error in errors -%}
           <p>{{ error }}</p>{{- '' -}}
         {%- endfor -%}
@@ -153,7 +153,7 @@
 
 {%- block content -%}
 
-  <h1>{{ _('Preferences') }}</h1>
+  <h1>{{ _('Infinity Search Preferences') }}</h1>
 
   <form id="search_form" method="post" action="{{ url_for('preferences') }}" autocomplete="off">
     {{- tabs_open() -}}
@@ -163,7 +163,7 @@
     {{- tab_header('maintab', 'general', _('General'), True) -}}
     {%- if 'categories' not in locked_preferences -%}
       <fieldset>
-        <legend>{{- _('Default categories') -}}</legend>
+        <legend>{{- _('Default categories for Infinity Search') -}}</legend>
         {% set display_tooltip = false %}
         {% include 'simple/categories.html' %}
       </fieldset>
@@ -173,7 +173,7 @@
     {% endif %}
     {%- if 'autocomplete' not in locked_preferences -%}
       {%- include 'simple/preferences/autocomplete.html' -%}
-    {%- endif -%}
+    {% endif -%}
     {%- if 'favicon' not in locked_preferences -%}
       {%- include 'simple/preferences/favicon.html' -%}
     {%- endif -%}
@@ -227,11 +227,11 @@
     {{- plugin_preferences('privacy') -}}
     {{- tab_footer() -}}
 
-    {# tab: enignes #}
+    {# tab: engines #}
 
-    {{- tab_header('maintab', 'engines', _('Engines')) -}}
+    {{- tab_header('maintab', 'engines', _('Search Engines')) -}}
     <p>
-      {{- _('Currently used search engines') -}}
+      {{- _('Currently used search engines in Infinity Search') -}}
     </p>
     {{- tabs_open() -}}
     {%- include 'simple/preferences/engines.html' -%}

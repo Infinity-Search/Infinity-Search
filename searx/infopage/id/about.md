@@ -1,82 +1,38 @@
-# Tentang SearXNG
+# Tentang Infinity Search
 
-SearXNG adalah sebuah [mesin pencari meta], yang mendapatkan hasil dari
-{{link('mesin pencari', 'preferences')}} lainnya sambil tidak melacak
+Infinity Search adalah [mesin pencari meta], yang mengumpulkan hasil dari mesin pencari lain
+{{link(‘mesin pencari’, ‘preferensi’)}} tanpa menyimpan informasi tentang
 penggunanya.
 
-Proyek SearXNG diarahkan oleh sebuah komunitas terbuka, bergabung dengan kami di
-Matrix jika Anda memiliki pertanyaan atau ingin mengobrol tentang SearXNG di
-[#searxng:matrix.org]
 
-Buat SearXNG lebih baik.
+## Mengapa menggunakannya?
 
-- Anda dapat membuat terjemahan SearXNG lebih baik di [Weblate], atau...
-- Lacak pengembangan, kirim kontribusi, dan laporkan masalah di [sumber
-  SearXNG].
-- Untuk mendapatkan informasi lanjut, kunjungi dokumentasi proyek SearXNG di
-  [dokumentasi SearXNG].
+- Infinity Search mungkin tidak memberikan hasil yang sepersonal Google, tetapi tidak
+  membuat profil tentang Anda.
+- Infinity Search tidak peduli dengan apa yang Anda cari, tidak pernah berbagi informasi dengan pihak ketiga,
+dan tidak dapat digunakan untuk membahayakan Anda.
 
-## Kenapa menggunakan SearXNG?
+Jika Anda peduli dengan privasi, ingin menjadi pengguna yang sadar, atau percaya pada kebebasan digital,
+jadikan Infinity Search sebagai mesin pencari default Anda atau jalankan di browser Anda sendiri!
 
-- SearXNG mungkin tidak menawarkan Anda hasil yang dipersonalisasikan seperti
-  Google, tetapi tidak membuat sebuah profil tentang Anda.
-- SearXNG tidak peduli apa yang Anda cari, tidak akan membagikan apa pun dengan
-  pihak ketiga, dan tidak dapat digunakan untuk mengkompromikan Anda.
-- SearXNG adalah perangkat lunak bebas, kodenya 100% terbuka, dan semuanya
-  dipersilakan untuk membuatnya lebih baik.
+## Bagaimana cara mengaturnya sebagai mesin pencari default?
 
-Jika Anda peduli dengan privasi, ingin menjadi pengguna yang sadar, ataupun
-percaya dalam kebebasan digital, buat SearXNG sebagai mesin pencari bawaan atau
-jalankan di server Anda sendiri!
-
-## Bagaimana saya dapat membuat SearXNG sebagai mesin pencari bawaan?
-
-SearXNG mendukung [OpenSearch].  Untuk informasi lanjut tentang mengubah mesin
-pencari bawaan Anda, lihat dokumentasi peramban Anda:
+Infinity Search mendukung [OpenSearch]. Untuk informasi lebih lanjut tentang mengubah mesin
+pencari default, lihat dokumentasi browser Anda:
 
 - [Firefox]
-- [Microsoft Edge] - Dibalik tautan, Anda juga akan menemukan beberapa instruksi
+- [Microsoft Edge] - Di balik tautan tersebut, Anda juga akan menemukan beberapa instruksi
   berguna untuk Chrome dan Safari.
-- Peramban berbasis [Chromium] hanya menambahkan situs web yang dikunjungi oleh
-  pengguna tanpa sebuah jalur.
+- [Browser berbasis Chromium] hanya menambahkan situs web yang dikunjungi pengguna tanpa
+  jalur.
 
-Apabila menambahkan mesin pencari, tidak boleh ada duplikat dengan nama yang
-sama.  Jika Anda menemukan masalah di mana Anda tidak bisa menambahkan mesin
-pencari, Anda bisa:
+Saat menambahkan mesin pencari, tidak boleh ada duplikat dengan nama yang sama. Jika
+Anda mengalami masalah saat menambahkan mesin pencari, Anda dapat:
 
-- menghapus duplikat (nama default: SearXNG) atau
-- menghubungi pemilik untuk memberikan nama yang berbeda dari nama default.
+- Hapus duplikat (nama default: Infinity Search) atau
+- Hubungi pemilik untuk memberi nama instance yang berbeda dari default.
 
-## Bagaimana caranya SearXNG bekerja?
+## Bagaimana cara kerjanya?
 
-SearXNG adalah sebuah *fork* dari [mesin pencari meta] [searx] yang banyak
-dikenal yang diinspirasi oleh [proyek Seeks].  SearXNG menyediakan privasi dasar
-dengan mencampur kueri Anda dengan pencarian pada *platform* lainnya tanpa
-menyimpan data pencarian.  SearXNG dapat ditambahkan ke bilah pencarian peramban
-Anda; lain lagi, SearXNG dapat diatur sebagai mesin pencarian bawaan.
-
-{{link('Laman statistik', 'stats')}} berisi beberapa statistik penggunaan anonim
-berguna tentang mesin pencarian yang digunakan.
-
-## Bagaimana caranya untuk membuat SearXNG milik saya?
-
-SearXNG menghargai kekhawatiran Anda tentang pencatatan (*log*), jadi ambil
-kodenya dari [sumber SearXNG] dan jalankan sendiri!
-
-Tambahkan instansi Anda ke [daftar instansi
-publik]({{get_setting('brand.public_instances')}}) ini untuk membantu orang lain
-mendapatkan kembali privasi mereka dan membuat internet lebih bebas.  Lebih
-terdesentralisasinya internet, lebih banyak kebebasan yang kita punya!
-
-
-[sumber SearXNG]: {{GIT_URL}}
-[#searxng:matrix.org]: https://matrix.to/#/#searxng:matrix.org
-[dokumentasi SearXNG]: {{get_setting('brand.docs_url')}}
-[searx]: https://github.com/searx/searx
-[mesin pencari meta]: https://id.wikipedia.org/wiki/Mesin_pencari_web#Mesin_Pencari_dan_Mesin_Pencari-meta
-[Weblate]: https://translate.codeberg.org/projects/searxng/
-[proyek Seeks]: https://beniz.github.io/seeks/
-[OpenSearch]: https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md
-[Firefox]: https://support.mozilla.org/id/kb/add-or-remove-search-engine-firefox
-[Microsoft Edge]: https://support.microsoft.com/id-id/microsoft-edge/ubah-mesin-pencarian-default-anda-f863c519-5994-a8ed-6859-00fbc123b782
-[Chromium]: https://www.chromium.org/tab-to-search
+Infinity Search adalah mesin pencari meta [Isearch] yang terkenal, yang
+terinspirasi oleh [Proyek Infinity]. Ia menyediakan privasi dasar dengan mencampur
