@@ -18,11 +18,10 @@ general:
   open_metrics: ''
 
 brand:
-  new_issue_url: https://github.com/burhanuddin-1/s/issues/new
+  new_issue_url: https://github.com/Infinity-Search/Infinity-Search/issues/new
   docs_url: https://docs.searxng.org/
-  public_instances: https://searx.space
   wiki_url: https://github.com/searxng/searxng/wiki
-  issue_url: https://github.com/searxng/searxng/issues
+  issue_url: https://github.com/Infinity-Search/Infinity-Search/issues/
   # custom:
   #   maintainer: "Jon Doe"
   #   # Custom entries in the footer: [title]: [link]
