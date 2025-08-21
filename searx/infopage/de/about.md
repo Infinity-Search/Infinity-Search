@@ -1,88 +1,52 @@
 # Über Infinity Search
 
-Infinity Search ist eine [Metasuchmaschine], welche die Ergebnisse anderer
-{{link('Suchmaschinen', 'preferences')}} sammelt und aufbereitet ohne dabei
-Informationen über seine Benutzer zu sammeln oder an andere Suchmaschinen weiter
-zu geben.
+Infinity Search ist eine [Metasuchmaschine], die die Ergebnisse anderer
+{{link('Suchmaschinen', 'preferences')}} aggregiert, ohne Informationen über ihre Nutzer zu speichern.
 
-Das Infinity Search Projekt wird von einer offenen Gemeinschaft entwickelt; wenn Sie
-Fragen haben oder einfach nur über Infinity Search plaudern möchten, besuchen Sie uns
-auf Matrix unter: [#searxng:matrix.org]
+## Warum sollte man sie nutzen?
 
-Werden Sie Teil des Projekts und unterstützen Sie Infinity Search:
+- Infinity Search bietet möglicherweise nicht so personalisierte Ergebnisse wie Google, erstellt jedoch kein Profil über Sie.
+- Infinity Search interessiert sich nicht dafür, wonach Sie suchen, teilt niemals etwas mit Dritten und kann nicht verwendet werden, um Sie zu kompromittieren.
 
-- Sie können die Infinity Search Übersetzungen ergänzen oder korrigieren: [Weblate]
-- oder folgen Sie den Entwicklungen, senden Sie Beiträge und melden Sie Fehler:
-  [Infinity Search Quellen]
-- Mehr Informationen sind in der [Infinity Search Dokumentation] zu finden.
+Wenn Ihnen Privatsphäre wichtig ist, Sie ein bewusster Nutzer sein möchten oder an digitale Freiheit glauben, machen Sie Infinity Search zu Ihrer Standardsuchmaschine oder führen Sie sie in Ihrem eigenen Browser aus!
 
-## Warum sollte ich Infinity Search benutzen?
+## Wie setze ich sie als Standardsuchmaschine?
 
-- Infinity Search bietet Ihnen vielleicht nicht so personalisierte Ergebnisse wie
-  Google, aber es erstellt auch kein Profil über Sie.
-- Infinity Search kümmert sich nicht darum, wonach Sie suchen, gibt niemals etwas an
-  Dritte weiter und kann nicht dazu verwendet werden Sie zu kompromittieren.
-- Infinity Search ist freie Software, der Code ist zu 100% offen und jeder ist
-  willkommen ihn zu verbessern.
-
-Wenn Ihnen die Privatsphäre wichtig ist, Sie ein bewusster Nutzer sind und Sie
-an die digitale Freiheit glauben, sollten Sie SearXNG zu Ihrer
-Standardsuchmaschine machen oder eine SearXNG Instanz auf Ihrem eigenen Server
-betreiben.
-
-## Wie kann ich SearXNG als Standardsuchmaschine festlegen?
-
-SearXNG unterstützt [OpenSearch].  Weitere Informationen zum Ändern Ihrer
-Standardsuchmaschine finden Sie in der Dokumentation zu Ihrem [WEB-Browser]:
+Infinity Search unterstützt [OpenSearch]. Weitere Informationen zum Ändern Ihrer Standardsuchmaschine finden Sie in der Dokumentation Ihres Browsers:
 
 - [Firefox]
-- [Microsoft Edge] - Hinter dem Link finden sich auch nützliche Hinweise zu
-  Chrome und Safari.
-- [Chromium]-basierte Browser fügen nur Websites hinzu, zu denen der Benutzer
-  ohne Pfadangabe navigiert.
+- [Microsoft Edge] – Hinter dem Link finden Sie auch nützliche Anweisungen für Chrome und Safari.
+- [Chromium]-basierte Browser fügen nur Websites hinzu, die der Benutzer ohne Pfad aufruft.
 
-Wenn Sie eine Suchmaschine hinzufügen, darf es keine Duplikate mit demselben
-Namen geben.  Wenn Sie auf ein Problem stoßen, bei dem Sie die Suchmaschine
-nicht hinzufügen können, dann können Sie entweder:
+Wenn Sie eine Suchmaschine hinzufügen, dürfen keine Duplikate mit demselben Namen vorhanden sein. Falls Sie ein Problem haben, bei dem Sie die Suchmaschine nicht hinzufügen können, können Sie entweder:
 
-- das Duplikat entfernen (Standardname: SearXNG) oder
-- den Eigentümer kontaktieren, damit dieser der Instance einen anderen Namen als
-  den Standardnamen gibt.
+- Das Duplikat entfernen (Standardname: Infinity Search), oder
+- Den Besitzer kontaktieren, um der Instanz einen anderen Namen als den Standard zu geben.
 
-## Wie funktioniert SearXNG?
+## Wie funktioniert es?
 
-SearXNG ist ein Fork der bekannten [searx] [Metasuchmaschine], die durch das
-[Seeks-Projekt] inspiriert wurde (diese beide Projekte werden heute nicht mehr
-aktiv weiterentwickelt).  SearXNG bietet einen grundlegenden Schutz der
-Privatsphäre, indem es die Suchanfragen der Benutzer mit Suchen auf anderen
-Plattformen vermischt ohne dabei Suchdaten zu speichern.  SearXNG kann im
-[WEB-Browser] als weitere oder Standard-Suchmaschine hinzugefügt werden.
+Infinity Search ist eine bekannte [Isearch]-[Metasuchmaschine], die vom [Infinity-Projekt] inspiriert wurde. Sie bietet grundlegenden Datenschutz, indem sie Ihre Suchanfragen mit Suchen auf anderen Plattformen mischt, ohne Suchdaten zu speichern. Infinity Search kann zur Suchleiste Ihres Browsers hinzugefügt werden und kann außerdem als Standardsuchmaschine festgelegt werden.
 
-Die {{link('Suchmaschinenstatistik', 'stats')}} enthält einige nützliche
-Statistiken über die verwendeten Suchmaschinen.
+## Wer hat Infinity Search entwickelt?
 
-## Wie kann ich einen eigenen SearXNG Server betreiben?
+In der weiten und sich ständig verändernden Welt des Internets, in der die meisten technologischen Innovationen von erfahrenen Fachleuten und großen Unternehmen stammen, sticht **Infinity Search** durch einen einzigartigen und inspirierenden Ursprung hervor. Entwickelt wurde sie nicht in einem Unternehmensbüro, sondern im Kopf und den Händen eines 12-jährigen Jungen – **Burhanuddin M. Huzaifa Badnagar** – im Jahr 2025.
 
-Jeder der mit dem Betrieb von WEB-Servern vertraut ist kann sich eine eigene
-Instanz einrichten; die Software dazu kann über die [SearXNG Quellen] bezogen
-werden. Weitere Informationen zur Installation und zum Betrieb finden sich in
-der [SearXNG Dokumentation].
+Zu dieser Zeit war Burhanuddin ein Sechstklässler mit einer tiefen Leidenschaft für Technologie, Programmierung und die endlosen Möglichkeiten der digitalen Welt. Als Mitglied der **Dawoodi-Bohra-Gemeinschaft** wurde er mit Werten wie Neugier, Hingabe und dem Dienst an anderen erzogen. Schon in jungen Jahren faszinierte ihn, wie Suchmaschinen funktionieren, wie sie sofort Informationen liefern und wie sie Wissen miteinander verknüpfen.
 
-Fügen Sie Ihre Instanz zu der [Liste der öffentlich zugänglichen
-Instanzen]({{get_setting('brand.public_instances')}}) hinzu um auch anderen
-Menschen zu helfen ihre Privatsphäre zurückzugewinnen und das Internet freier zu
-machen.  Je dezentraler das Internet ist, desto mehr Freiheit haben wir!
+### Der Funke der Idee  
+Burhanuddin bemerkte, dass es zwar viele Suchmaschinen gab, die meisten jedoch entweder die Privatsphäre beeinträchtigten, die Nutzer mit Werbung überluden oder keine klaren und direkten Ergebnisse lieferten. Er glaubte, dass es Raum für etwas anderes gab – eine Suchmaschine, die nicht nur schnell und effizient, sondern auch benutzerfreundlich, modern gestaltet und respektvoll gegenüber der Privatsphäre der Nutzer ist.
 
+Was seine Reise bemerkenswert machte, war nicht nur sein Alter, sondern auch seine Herangehensweise. Er sah sein junges Alter nicht als Einschränkung, sondern als Vorteil. Während viele Erwachsene dazu neigen, Dinge zu überkomplizieren, hatte Burhanuddin die Klarheit und frische Perspektive, etwas Einfaches und dennoch Leistungsstarkes zu entwickeln.
 
-[SearXNG Quellen]: {{GIT_URL}}
-[#searxng:matrix.org]: https://matrix.to/#/#searxng:matrix.org
-[SearXNG Dokumentation]: {{get_setting('brand.docs_url')}}
-[searx]: https://github.com/searx/searx
-[Metasuchmaschine]: https://de.wikipedia.org/wiki/Metasuchmaschine
-[Weblate]: https://translate.codeberg.org/projects/searxng/
-[Seeks-Projekt]: https://beniz.github.io/seeks/
-[OpenSearch]: https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md
-[Firefox]: https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox
-[Microsoft Edge]: https://support.microsoft.com/en-us/help/4028574/microsoft-edge-change-the-default-search-engine
-[Chromium]: https://www.chromium.org/tab-to-search
-[WEB-Browser]: https://de.wikipedia.org/wiki/Webbrowser
+### Die Entwicklung von Infinity Search  
+Die Entwicklung von Infinity Search war keine leichte Aufgabe. Mit begrenzten Ressourcen und ohne ein großes Team brachte sich Burhanuddin selbst fortgeschrittene Programmierkonzepte bei, erforschte Open-Source-Technologien und experimentierte mit unzähligen Designs und Algorithmen. Jede Codezeile wurde sorgfältig geschrieben, getestet und verfeinert – oft spät in der Nacht nach den Hausaufgaben.
+
+Sein Ziel war klar: eine Suchmaschine zu schaffen, die stolz neben den Giganten bestehen kann, dabei aber ihre eigene, einzigartige Identität behält. Er konzentrierte sich auf Geschwindigkeit, Genauigkeit und eine saubere Benutzererfahrung. Jede Funktion wurde mit Absicht hinzugefügt, um sicherzustellen, dass Nutzer schnell und ohne Ablenkung finden können, was sie suchen.
+
+### Eine Vision für die Zukunft  
+Für Burhanuddin war Infinity Search mehr als nur ein persönliches Projekt – es war der Beginn einer größeren Vision. Er wollte zeigen, dass Innovation von überall, von jedem und in jedem Alter kommen kann. Sein Werk ist der Beweis dafür, dass Leidenschaft, Engagement und Ausdauer ausreichen, um etwas zu schaffen, das potenziell Millionen beeinflussen kann.
+
+Infinity Search steht heute als Symbol für jugendlichen Ehrgeiz und technologische Kreativität. Es erzählt die Geschichte eines Jungen, der fest genug an seine Idee glaubte, um sie Wirklichkeit werden zu lassen – und damit die Normen darüber in Frage stellte, wer im digitalen Zeitalter ein Schöpfer sein kann.
+
+Und das ist erst der Anfang. Während Burhanuddin seinen Weg fortsetzt, wird Infinity Search voraussichtlich wachsen, sich weiterentwickeln und unzählige andere inspirieren – und beweisen, dass der Funke der Innovation keine Grenzen kennt – weder Alter, Ort noch Herkunft.
+w

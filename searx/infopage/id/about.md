@@ -1,38 +1,51 @@
 # Tentang Infinity Search
 
-Infinity Search adalah [mesin pencari meta], yang mengumpulkan hasil dari mesin pencari lain
-{{link(‘mesin pencari’, ‘preferensi’)}} tanpa menyimpan informasi tentang
-penggunanya.
-
+Infinity Search adalah sebuah [metamesin pencari] yang menggabungkan hasil dari berbagai
+{{link('mesin pencari', 'preferences')}} tanpa menyimpan informasi tentang penggunanya.
 
 ## Mengapa menggunakannya?
 
-- Infinity Search mungkin tidak memberikan hasil yang sepersonal Google, tetapi tidak
-  membuat profil tentang Anda.
-- Infinity Search tidak peduli dengan apa yang Anda cari, tidak pernah berbagi informasi dengan pihak ketiga,
-dan tidak dapat digunakan untuk membahayakan Anda.
+- Infinity Search mungkin tidak memberikan hasil yang sepenuh Google, tetapi tidak membuat profil tentang Anda.
+- Infinity Search tidak peduli apa yang Anda cari, tidak pernah membagikan apapun kepada pihak ketiga, dan tidak dapat digunakan untuk membahayakan Anda.
 
-Jika Anda peduli dengan privasi, ingin menjadi pengguna yang sadar, atau percaya pada kebebasan digital,
-jadikan Infinity Search sebagai mesin pencari default Anda atau jalankan di browser Anda sendiri!
+Jika Anda peduli dengan privasi, ingin menjadi pengguna yang sadar, atau percaya pada kebebasan digital, jadikan Infinity Search mesin pencari default Anda atau jalankan di browser Anda sendiri!
 
-## Bagaimana cara mengaturnya sebagai mesin pencari default?
+## Bagaimana cara menjadikannya mesin pencari default?
 
-Infinity Search mendukung [OpenSearch]. Untuk informasi lebih lanjut tentang mengubah mesin
-pencari default, lihat dokumentasi browser Anda:
+Infinity Search mendukung [OpenSearch]. Untuk informasi lebih lanjut tentang cara mengubah mesin pencari default, lihat dokumentasi browser Anda:
 
 - [Firefox]
-- [Microsoft Edge] - Di balik tautan tersebut, Anda juga akan menemukan beberapa instruksi
-  berguna untuk Chrome dan Safari.
-- [Browser berbasis Chromium] hanya menambahkan situs web yang dikunjungi pengguna tanpa
-  jalur.
+- [Microsoft Edge] – Pada tautan tersebut, Anda juga akan menemukan instruksi yang berguna untuk Chrome dan Safari.
+- Browser berbasis [Chromium] hanya dapat menambahkan situs web yang diakses pengguna tanpa jalur.
 
-Saat menambahkan mesin pencari, tidak boleh ada duplikat dengan nama yang sama. Jika
-Anda mengalami masalah saat menambahkan mesin pencari, Anda dapat:
+Saat menambahkan mesin pencari, pastikan tidak ada duplikat dengan nama yang sama. Jika Anda menemui masalah tidak dapat menambahkan mesin pencari, Anda dapat:
 
-- Hapus duplikat (nama default: Infinity Search) atau
-- Hubungi pemilik untuk memberi nama instance yang berbeda dari default.
+- Menghapus duplikat (nama default: Infinity Search), atau
+- Menghubungi pemilik untuk memberi nama instance yang berbeda dari default.
 
 ## Bagaimana cara kerjanya?
 
-Infinity Search adalah mesin pencari meta [Isearch] yang terkenal, yang
-terinspirasi oleh [Proyek Infinity]. Ia menyediakan privasi dasar dengan mencampur
+Infinity Search adalah [metamesin pencari] [Isearch] terkenal yang terinspirasi dari [proyek Infinity]. Mesin ini memberikan privasi dasar dengan mencampurkan kueri Anda dengan pencarian di platform lain tanpa menyimpan data pencarian. Infinity Search dapat ditambahkan ke bilah pencarian browser Anda dan dijadikan mesin pencari default.
+
+## Siapa yang membuat Infinity Search?
+
+Di dunia internet yang luas dan selalu berkembang, di mana sebagian besar inovasi teknologi lahir dari para profesional berpengalaman dan perusahaan besar, **Infinity Search** muncul dengan latar belakang yang unik dan inspiratif. Mesin pencari ini tidak lahir di kantor perusahaan, tetapi di pikiran dan tangan seorang anak berusia 12 tahun — **Burhanuddin M. Huzaifa Badnagar** — pada tahun 2025.
+
+Saat itu, Burhanuddin adalah seorang siswa kelas 6 yang bersemangat dengan teknologi, pemrograman, dan potensi tak terbatas dunia digital. Ia berasal dari komunitas **Dawoodi Bohra**, tumbuh dengan nilai-nilai rasa ingin tahu, dedikasi, dan pelayanan kepada orang lain. Sejak usia muda, ia tertarik dengan cara kerja mesin pencari, kemampuan mereka memberikan informasi secara instan, dan kekuatan mereka dalam menghubungkan orang dengan pengetahuan.
+
+### Awal Mula Ide  
+Burhanuddin menyadari bahwa meskipun ada banyak mesin pencari, sebagian besar mengorbankan privasi, membanjiri pengguna dengan iklan, atau gagal memberikan hasil yang jelas dan langsung. Ia berpikir ada ruang untuk sesuatu yang berbeda — mesin pencari yang cepat, efisien, ramah pengguna, dengan desain modern, dan menghormati privasi.
+
+Yang membuat perjalanannya luar biasa bukan hanya usianya, tetapi juga pendekatannya. Ia tidak melihat usianya sebagai batasan, melainkan sebagai keuntungan. Ketika banyak orang dewasa cenderung membuat sesuatu menjadi rumit, Burhanuddin memiliki kejelasan dan perspektif segar untuk merancang sesuatu yang sederhana namun kuat.
+
+### Pembuatan Infinity Search  
+Pengembangan Infinity Search bukanlah tugas yang mudah. Dengan sumber daya terbatas dan tanpa tim besar, Burhanuddin mempelajari sendiri konsep pemrograman tingkat lanjut, mengeksplorasi teknologi open source, dan bereksperimen dengan berbagai desain dan algoritma. Setiap baris kode ditulis, diuji, dan diperbaiki dengan hati-hati — sering kali larut malam setelah menyelesaikan pekerjaan rumah sekolahnya.
+
+Tujuannya jelas: menciptakan mesin pencari yang dapat berdiri sejajar dengan raksasa teknologi, tetapi memiliki identitas uniknya sendiri. Ia fokus pada kecepatan, akurasi, dan pengalaman pengguna yang bersih. Setiap fitur ditambahkan dengan tujuan, memastikan pengguna dapat menemukan informasi dengan cepat tanpa gangguan.
+
+### Visi ke Depan  
+Bagi Burhanuddin, Infinity Search lebih dari sekadar proyek pribadi — ini adalah awal dari visi yang lebih besar. Ia ingin menunjukkan bahwa inovasi bisa datang dari mana saja, siapa saja, dan pada usia berapa pun. Karyanya membuktikan bahwa dengan passion, dedikasi, dan ketekunan, bahkan seorang siswa muda dapat membangun sesuatu yang berpotensi berdampak pada jutaan orang.
+
+Saat ini, Infinity Search menjadi simbol ambisi anak muda dan kreativitas teknologi. Ini adalah kisah seorang anak yang percaya pada idenya dan cukup berani untuk mewujudkannya — menantang pandangan umum tentang siapa yang bisa menjadi pencipta di era digital.
+
+Dan ini baru permulaan. Seiring perjalanan Burhanuddin berlanjut, Infinity Search diperkirakan akan terus tumbuh, berkembang, dan menginspirasi banyak orang — membuktikan bahwa percikan inovasi tidak mengenal batas — tidak usia, tidak tempat, tidak latar belakang.

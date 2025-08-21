@@ -2,7 +2,7 @@ general:
   # Debug mode, only for development. Is overwritten by ${SEARXNG_DEBUG}
   debug: false
   # displayed name
-  instance_name: "SearXNG"
+  instance_name: "Infinity Search"
   # For example: https://example.com/privacy
   privacypolicy_url: false
   # use true to use your own donation page written in searx/info/en/donate.md
@@ -18,7 +18,7 @@ general:
   open_metrics: ''
 
 brand:
-  new_issue_url: https://github.com/searxng/searxng/issues/new
+  new_issue_url: https://github.com/burhanuddin-1/s/issues/new
   docs_url: https://docs.searxng.org/
   public_instances: https://searx.space
   wiki_url: https://github.com/searxng/searxng/wiki
@@ -170,9 +170,14 @@ ui:
 
 # communication with search engines
 #
+
+botdetection:
+  enabled: false
+  trusted_proxies: []
+
 outgoing:
   # default timeout in seconds, can be override by engine
-  request_timeout: 3.0
+  request_timeout: 100.0
   # the maximum timeout in seconds
   # max_request_timeout: 10.0
   # suffix of searxng_useragent, could contain information like an email address

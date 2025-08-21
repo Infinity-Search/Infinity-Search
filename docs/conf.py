@@ -3,23 +3,44 @@
 import  sys, os
 from pathlib import Path
 from pallets_sphinx_themes import ProjectLink
+from types import SimpleNamespace as _NS
+from typing import Any as _Any
 
-from searx import get_setting
-from searx.version import VERSION_STRING, GIT_URL, GIT_BRANCH
+# Ensure Windows build works before importing any searx modules that may
+# require POSIX-only deps (uvloop, pwd, grp)
+import types as _types
+_uvloop = sys.modules.setdefault('uvloop', _types.ModuleType('uvloop'))
+if not hasattr(_uvloop, 'install'):
+    # Silencing type checker; at runtime this is fine
+    setattr(_uvloop, 'install', (lambda: None))  # type: ignore[attr-defined]
+if os.name == 'nt':
+    sys.modules.setdefault('pwd', _types.ModuleType('pwd'))
+    sys.modules.setdefault('grp', _types.ModuleType('grp'))
+
+# Try importing searx metadata; provide fallbacks if not available
+try:
+    from searx import get_setting
+    from searx.version import VERSION_STRING, GIT_URL, GIT_BRANCH
+except Exception:
+    def get_setting(name, default=None):
+        return default
+    VERSION_STRING = "0.0.0"
+    GIT_URL = ""
+    GIT_BRANCH = ""
 
 # Project --------------------------------------------------------------
 
-project = 'SearXNG'
-copyright = 'SearXNG team'
-author = 'SearXNG team'
+project = 'Infinity Search'
+copyright = 'Infinity Search team'
+author = 'Infinity Search team'
 release, version = VERSION_STRING, VERSION_STRING
 SEARXNG_URL = get_setting('server.base_url') or 'https://example.org/searxng'
-ISSUE_URL = get_setting('brand.issue_url')
-DOCS_URL = get_setting('brand.docs_url')
-PUBLIC_INSTANCES = get_setting('brand.public_instances')
-PRIVACYPOLICY_URL = get_setting('general.privacypolicy_url')
-CONTACT_URL = get_setting('general.contact_url')
-WIKI_URL = get_setting('brand.wiki_url')
+ISSUE_URL = get_setting('brand.issue_url') or ''
+DOCS_URL = get_setting('brand.docs_url') or ''
+PUBLIC_INSTANCES = get_setting('brand.public_instances') or ''
+PRIVACYPOLICY_URL = get_setting('general.privacypolicy_url') or ''
+CONTACT_URL = get_setting('general.contact_url') or ''
+WIKI_URL = get_setting('brand.wiki_url') or ''
 
 SOURCEDIR = Path(__file__).parent.parent / "searx"
 os.environ['SOURCEDIR'] = str(SOURCEDIR)
@@ -40,27 +61,47 @@ numfig = True
 
 exclude_patterns = ['build-templates/*.rst', 'user/*.md']
 
-import searx.engines
-import searx.plugins
-import searx.webutils
+DOCS_MINIMAL = os.getenv('DOCS_MINIMAL', '1' if os.name == 'nt' else '0') == '1'
 
-# import searx.webapp is needed to init the engines & plugins, to init a
-# (empty) secret_key is needed.
-searx.settings['server']['secret_key'] = ''
-import searx.webapp
+if not DOCS_MINIMAL:
+    import searx.engines
+    import searx.plugins
+    import searx.webutils
+    # import searx.webapp is needed to init the engines & plugins, to init a
+    # (empty) secret_key is needed.
+    from searx import settings as _searx_settings
+    _searx_settings['server']['secret_key'] = ''
+    import searx.webapp
+    searx.engines.load_engines(_searx_settings['engines'])
+else:
+    # Provide minimal dummies so docs can build without full app
+    searx: _Any = _NS()
+    searx.engines = _NS()
+    searx.plugins = _NS()
+    searx.webutils = _NS()
+    searx.engines.engines = {}
+    searx.engines.categories = {}
+    searx.plugins.STORAGE = {}
+    def _group_engines_in_tab(x):
+        return x
+    searx.webutils.group_engines_in_tab = _group_engines_in_tab
 
-searx.engines.load_engines(searx.settings['engines'])
+_categories_as_tabs = {}
+if not DOCS_MINIMAL:
+    from searx import settings as _searx_settings
+    _cat_tabs = _searx_settings.get('categories_as_tabs', [])
+    _categories_as_tabs = {c: getattr(searx.engines, 'categories', {}).get(c, []) for c in _cat_tabs}
 
 jinja_contexts = {
     'searx': {
-        'engines': searx.engines.engines,
-        'plugins': searx.plugins.STORAGE,
+        'engines': getattr(searx.engines, 'engines', {}),
+        'plugins': getattr(searx.plugins, 'STORAGE', {}),
         'version': {
             'node': os.getenv('NODE_MINIMUM_VERSION')
         },
-        'enabled_engine_count': sum(not x.disabled for x in searx.engines.engines.values()),
-        'categories': searx.engines.categories,
-        'categories_as_tabs': {c: searx.engines.categories[c] for c in searx.settings['categories_as_tabs']},
+        'enabled_engine_count': sum((not getattr(x, 'disabled', False)) for x in getattr(searx.engines, 'engines', {}).values()) if getattr(searx.engines, 'engines', None) else 0,
+        'categories': getattr(searx.engines, 'categories', {}),
+        'categories_as_tabs': _categories_as_tabs,
     },
 }
 jinja_filters = {
@@ -156,9 +197,8 @@ issues_github_path = "searxng/searxng"
 
 # HTML -----------------------------------------------------------------
 
-# https://searxng.github.io/searxng --> '/searxng/'
-# https://docs.searxng.org --> '/'
-notfound_urls_prefix = '/'
+# Ensure 404 links are relative
+notfound_urls_prefix = ''
 
 sys.path.append(os.path.abspath('_themes'))
 sys.path.insert(0, os.path.abspath("../"))
@@ -198,7 +238,7 @@ html_sidebars = {
 }
 singlehtml_sidebars = {"index": ["project.html", "localtoc.html"]}
 html_logo = "../client/simple/src/brand/searxng-wordmark.svg"
-html_title = "SearXNG Documentation ({})".format(VERSION_STRING)
+html_title = "Infinity Search Documentation ({})".format(VERSION_STRING)
 html_show_sourcelink = True
 
 # LaTeX ----------------------------------------------------------------

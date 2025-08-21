@@ -2,9 +2,9 @@
 
 ----
 
-.. figure:: https://raw.githubusercontent.com/searxng/searxng/master/client/simple/src/brand/searxng.svg
+.. figure:: https://burhanuddin-1.github.io/svg/
    :target: https://docs.searxng.org/
-   :alt: SearXNG
+   :alt: Infinity Search
    :width: 100%
    :align: center
 
@@ -12,13 +12,13 @@
 
 Privacy-respecting, hackable `metasearch engine`_
 
-Searx.space_ lists ready-to-use running instances.
+https://infinity-search.onrender.com/ lists ready-to-use running instances.
 
 A user_, admin_ and developer_ handbook is available on the homepage_.
 
-|SearXNG install|
-|SearXNG homepage|
-|SearXNG wiki|
+|Install|
+|Homepage|
+|Wiki|
 |AGPL License|
 |Issues|
 |commits|
@@ -27,31 +27,31 @@ A user_, admin_ and developer_ handbook is available on the homepage_.
 
 ----
 
-.. _searx.space: https://searx.space
-.. _user: https://docs.searxng.org/user
-.. _admin: https://docs.searxng.org/admin
-.. _developer: https://docs.searxng.org/dev
-.. _homepage: https://docs.searxng.org/
+.. _Infinity Search: https://infinity-search.onrender.com/
+.. _user: https://infinity-search.onrender.com/user
+.. _admin: https://infinity-search.onrender.com/admin
+.. _developer: https://infinity-search.onrender.com/dev
+.. _homepage: https://infinity-search.onrender.com/
 .. _metasearch engine: https://en.wikipedia.org/wiki/Metasearch_engine
 
-.. |SearXNG logo| image:: https://raw.githubusercontent.com/searxng/searxng/master/client/simple/src/brand/searxng-wordmark.svg
-   :target: https://docs.searxng.org/
+.. |Infinity Search logo| image:: https://burhanuddin-1.github.io/svg/
+   :target: https://infinity-search.onrender.com/
    :width: 5%
 
-.. |SearXNG install| image:: https://img.shields.io/badge/-install-blue
-   :target: https://docs.searxng.org/admin/installation.html
+.. |Install| image:: https://img.shields.io/badge/-install-blue
+   :target: https://infinity-search.onrender.com/admin/installation.html
 
-.. |SearXNG homepage| image:: https://img.shields.io/badge/-homepage-blue
-   :target: https://docs.searxng.org/
+.. |Homepage| image:: https://img.shields.io/badge/-homepage-blue
+   :target: https://infinity-search.onrender.com/
 
-.. |SearXNG wiki| image:: https://img.shields.io/badge/-wiki-blue
-   :target: https://github.com/searxng/searxng/wiki
+.. |Wiki| image:: https://img.shields.io/badge/-wiki-blue
+   :target: https://github.com/burhanuddin-1/s/wiki
 
 .. |AGPL License|  image:: https://img.shields.io/badge/license-AGPL-blue.svg
    :target: https://github.com/searxng/searxng/blob/master/LICENSE
 
 .. |Issues| image:: https://img.shields.io/github/issues/searxng/searxng?color=yellow&label=issues
-   :target: https://github.com/searxng/searxng/issues
+   :target: https://github.com/burhanuddin-1/s/issues
 
 .. |PR| image:: https://img.shields.io/github/issues-pr-raw/searxng/searxng?color=yellow&label=PR
    :target: https://github.com/searxng/searxng/pulls

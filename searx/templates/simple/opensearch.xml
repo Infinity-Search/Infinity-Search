@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
-  <ShortName>{{ instance_name }}</ShortName>
+  <ShortName>Infinity Search</ShortName>
   <LongName>Infinity Search</LongName>
   <Description>Infinity Search is a metasearch engine that respects your privacy.</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image type="image/png">{{ url_for('static', filename='img/favicon.png', _external=True) }}</Image>
+  <Image type="image/png">{% include 'simple/searxng-wordmark.min.svg' without context %}</Image>
   {% if opensearch_method == 'GET' %}
   <Url rel="results" type="text/html" method="{{ opensearch_method }}" template="{{ url_for('search', _external=True) }}?q={searchTerms}"/>
   {% else %}

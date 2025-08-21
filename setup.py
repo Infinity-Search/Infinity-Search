@@ -12,8 +12,6 @@ with open('README.rst', encoding='utf-8') as f:
 with open('requirements.txt') as f:
     requirements = [ l.strip() for l in f.readlines()]
 
-with open('requirements-dev.txt') as f:
-    dev_requirements = [ l.strip() for l in f.readlines()]
 
 setup(
     name='searxng',
@@ -44,7 +42,7 @@ setup(
     ),
     install_requires=requirements,
     extras_require={
-        'test': dev_requirements
+        'test': requirements
     },
     entry_points={
         'console_scripts': [
